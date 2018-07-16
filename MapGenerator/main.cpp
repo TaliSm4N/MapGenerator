@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstdlib>
+#include <ctime>
 #include "main.h"
 #include "room.h"
 #include "cursor.h"
@@ -9,25 +10,34 @@ int main()
 {
 	srand(time(NULL));
 
-	SquareRoom *test = new SquareRoom();
+	Room *test = new SquareRoom();
+	RoomList *roomList = new RoomList();
 
+	
+#ifdef _WIN32
+	system("mode con cols=200 lines=100");
+	system("cls");
+#elif __linux
 	system("clear");
+#endif
+
+//	for(int i=0;i<MAP_SIZE;i++)
+//		std::cout<<i<<std::endl;
+	gotoxy(0,0);
 	/*
-	gotoxy(10,10);
-	std::cout<<"*";
-	gotoxy(0,0);
-	std::cout<<"#";
-	gotoxy(20,20);
-	*/
-
-	for(int i=0;i<MAP_SIZE;i++)
-		std::cout<<i<<std::endl;
-	gotoxy(0,0);
-
 	test->SetPosition();
 	test->ShowRoom();
 
-	gotoxy(0,100);
+	
 	test->GetRoom();
+
+	((SquareRoom *)test)->GetPoint(1).GetPoint();
+	*/
+
+	roomList->SetRoomList();
+	roomList->ShowRoomList();
+	roomList->GetRoomList();
 }
+
+
 
