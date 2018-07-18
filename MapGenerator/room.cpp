@@ -186,9 +186,9 @@ void RoomList::ShowRoomList()
 	for (int i = 0; i < MAX_ROOM; i++)
 	{
 		//system("pause");
-		if(list[i].GetAttr()==SQUARE_MODE)
+		if(list[i]->GetAttr()==SQUARE_MODE)
 		{
-			list[i].ShowRoom();
+			list[i]->ShowRoom();
 			//roomLog->WriteLog("--"+std::to_string(i)+"--");
 			//list[i].WriteLog(*roomLog);
 		}
@@ -201,11 +201,11 @@ void RoomList::SetRoomList()
 
 	for (int i = 0; i < MAX_ROOM; i++)
 	{
-		list[i] = *(new SquareRoom());
-		list[i].SetPosition();
+		list[i] = new SquareRoom();
+		list[i]->SetPosition();
 		for (int j = 0; j < i; j++)
 		{
-			if (list[i].OverlapRoom(list[j]))
+			if (list[i]->OverlapRoom(*list[j]))
 			{
 				i--;
 				//std::string str = "";
@@ -226,6 +226,6 @@ void RoomList::GetRoomList() const
 	gotoxy(1, MAX_SIZE *2);
 	for (int i = 0; i < MAX_ROOM; i++)
 	{
-		list[i].GetRoom();
+		list[i]->GetRoom();
 	}
 }

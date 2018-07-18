@@ -81,7 +81,7 @@ public:
 class RoomList
 {
 private:
-	SquareRoom list[MAX_ROOM];
+	SquareRoom *list[MAX_ROOM];
 	//Log *roomLog;
 public:
 	RoomList();
