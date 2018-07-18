@@ -2,6 +2,7 @@
 #define __ROOM_H__
 
 #include "define.h"
+#include "log.h"
 
 //use Point::Range(int mode,int p) for mode
 #define HORIZON_MODE 0
@@ -11,8 +12,7 @@
 #define SQUARE_MODE 0
 #define IRREGULAR_MODE 1
 
-#define LINECHECK(z,t,n) ((p[0].Get##z()-2>=0?p[0].Get##z()-2:0) <= t.GetPoint(n).Get##z() && p[1].Get##z()+2 >= t.GetPoint(n).Get##z())
-
+#define LINECHECK(z,t,n) ((p[0].Get##z()-2>=0?p[0].Get##z()-2:0) <= t.GetPoint(n).Get##z() && p[1].Get##z()+2 >= t.GetPoint(n).Get##z()||(t.GetPoint(0).Get##z()-2>=0?t.GetPoint(0).Get##z()-2:0) <= p[n].Get##z() && t.GetPoint(1).Get##z()+2 >= p[n].Get##z())
 
 //방의 기준이 되는 포인트 클래스
 class Point
@@ -48,6 +48,7 @@ public:
 	virtual void GetRoom() const {};
 	virtual void ShowRoom() const{};
 	virtual bool OverlapRoom(Room &other) const { return false; };
+	//virtual void WriteLog(Log &l) const {};
 
 	int GetAttr();
 };
@@ -65,6 +66,7 @@ public:
 	Point GetPoint(int token) const;
 	bool LineOverlap(int mode, int start, int end) const;
 	bool OverlapRoom(Room &other) const;
+	//void WriteLog(Log &l) const;
 };
 
 //사각형 방이 아닌 방의 클래스
@@ -80,7 +82,9 @@ class RoomList
 {
 private:
 	SquareRoom list[MAX_ROOM];
+	//Log *roomLog;
 public:
+	RoomList();
 	void ShowRoomList();
 	void SetRoomList();
 	void GetRoomList() const;

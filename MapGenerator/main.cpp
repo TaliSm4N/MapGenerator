@@ -21,6 +21,15 @@ int main()
 	system("clear");
 #endif
 
+	for(int i =0; i<MAP_SIZE;i++)
+	{
+		for(int j=0;j<MAP_SIZE;j++)
+		{
+			std::cout<<'*';
+		}
+		std::cout<<std::endl;
+	}
+
 //	for(int i=0;i<MAP_SIZE;i++)
 //		std::cout<<i<<std::endl;
 	gotoxy(0,0);
@@ -36,7 +45,7 @@ int main()
 
 	roomList->SetRoomList();
 	roomList->ShowRoomList();
-	roomList->GetRoomList();
+	//roomList->GetRoomList();
 }
 
 

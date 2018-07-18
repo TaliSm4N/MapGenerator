@@ -1,0 +1,324 @@
+LOG:===Generator start===
+LOG:overlap: 4, 3
+LOG:p[0]
+x: 84, y: 83
+LOG:p[1]
+x: 96, y: 93
+LOG:p[0]
+x: 82, y: 56
+LOG:p[1]
+x: 93, y: 63
+LOG:overlap: 4, 0
+LOG:p[0]
+x: 84, y: 83
+LOG:p[1]
+x: 96, y: 93
+LOG:p[0]
+x: 85, y: 71
+LOG:p[1]
+x: 93, y: 78
+LOG:overlap: 5, 5
+LOG:p[0]
+x: 33, y: 34
+LOG:p[1]
+x: 46, y: 48
+LOG:p[0]
+x: 33, y: 34
+LOG:p[1]
+x: 46, y: 48
+LOG:overlap: 6, 0
+LOG:p[0]
+x: 63, y: 81
+LOG:p[1]
+x: 74, y: 87
+LOG:p[0]
+x: 85, y: 71
+LOG:p[1]
+x: 93, y: 78
+LOG:overlap: 6, 0
+LOG:p[0]
+x: 63, y: 81
+LOG:p[1]
+x: 74, y: 87
+LOG:p[0]
+x: 85, y: 71
+LOG:p[1]
+x: 93, y: 78
+LOG:overlap: 8, 7
+LOG:p[0]
+x: 84, y: 4
+LOG:p[1]
+x: 92, y: 9
+LOG:p[0]
+x: 38, y: 75
+LOG:p[1]
+x: 48, y: 81
+LOG:overlap: 8, 0
+LOG:p[0]
+x: 84, y: 4
+LOG:p[1]
+x: 92, y: 9
+LOG:p[0]
+x: 85, y: 71
+LOG:p[1]
+x: 93, y: 78
+LOG:overlap: 8, 8
+LOG:p[0]
+x: 84, y: 4
+LOG:p[1]
+x: 92, y: 9
+LOG:p[0]
+x: 84, y: 4
+LOG:p[1]
+x: 92, y: 9
+LOG:overlap: 9, 6
+LOG:p[0]
+x: 14, y: 72
+LOG:p[1]
+x: 24, y: 79
+LOG:p[0]
+x: 63, y: 81
+LOG:p[1]
+x: 74, y: 87
+LOG:overlap: 9, 2
+LOG:p[0]
+x: 14, y: 72
+LOG:p[1]
+x: 24, y: 79
+LOG:p[0]
+x: 40, y: 59
+LOG:p[1]
+x: 51, y: 72
+LOG:overlap: 9, 3
+LOG:p[0]
+x: 14, y: 72
+LOG:p[1]
+x: 24, y: 79
+LOG:p[0]
+x: 82, y: 56
+LOG:p[1]
+x: 93, y: 63
+LOG:overlap: 10, 3
+LOG:p[0]
+x: 56, y: 94
+LOG:p[1]
+x: 64, y: 99
+LOG:p[0]
+x: 82, y: 56
+LOG:p[1]
+x: 93, y: 63
+LOG:overlap: 11, 10
+LOG:p[0]
+x: 94, y: 36
+LOG:p[1]
+x: 99, y: 45
+LOG:p[0]
+x: 56, y: 94
+LOG:p[1]
+x: 64, y: 99
+LOG:overlap: 11, 9
+LOG:p[0]
+x: 94, y: 36
+LOG:p[1]
+x: 99, y: 45
+LOG:p[0]
+x: 14, y: 72
+LOG:p[1]
+x: 24, y: 79
+LOG:overlap: 11, 0
+LOG:p[0]
+x: 94, y: 36
+LOG:p[1]
+x: 99, y: 45
+LOG:p[0]
+x: 85, y: 71
+LOG:p[1]
+x: 93, y: 78
+LOG:overlap: 11, 4
+LOG:p[0]
+x: 94, y: 36
+LOG:p[1]
+x: 99, y: 45
+LOG:p[0]
+x: 84, y: 83
+LOG:p[1]
+x: 96, y: 93
+LOG:overlap: 11, 9
+LOG:p[0]
+x: 94, y: 36
+LOG:p[1]
+x: 99, y: 45
+LOG:p[0]
+x: 14, y: 72
+LOG:p[1]
+x: 24, y: 79
+LOG:overlap: 11, 6
+LOG:p[0]
+x: 94, y: 36
+LOG:p[1]
+x: 99, y: 45
+LOG:p[0]
+x: 63, y: 81
+LOG:p[1]
+x: 74, y: 87
+LOG:overlap: 12, 0
+LOG:p[0]
+x: 48, y: 3
+LOG:p[1]
+x: 55, y: 13
+LOG:p[0]
+x: 85, y: 71
+LOG:p[1]
+x: 93, y: 78
+LOG:overlap: 12, 6
+LOG:p[0]
+x: 48, y: 3
+LOG:p[1]
+x: 55, y: 13
+LOG:p[0]
+x: 63, y: 81
+LOG:p[1]
+x: 74, y: 87
+LOG:overlap: 13, 5
+LOG:p[0]
+x: 53, y: 50
+LOG:p[1]
+x: 64, y: 55
+LOG:p[0]
+x: 33, y: 34
+LOG:p[1]
+x: 46, y: 48
+LOG:overlap: 13, 4
+LOG:p[0]
+x: 53, y: 50
+LOG:p[1]
+x: 64, y: 55
+LOG:p[0]
+x: 84, y: 83
+LOG:p[1]
+x: 96, y: 93
+LOG:overlap: 13, 8
+LOG:p[0]
+x: 53, y: 50
+LOG:p[1]
+x: 64, y: 55
+LOG:p[0]
+x: 84, y: 4
+LOG:p[1]
+x: 92, y: 9
+LOG:overlap: 13, 1
+LOG:p[0]
+x: 53, y: 50
+LOG:p[1]
+x: 64, y: 55
+LOG:p[0]
+x: 61, y: 15
+LOG:p[1]
+x: 69, y: 24
+LOG:overlap: 13, 9
+LOG:p[0]
+x: 53, y: 50
+LOG:p[1]
+x: 64, y: 55
+LOG:p[0]
+x: 14, y: 72
+LOG:p[1]
+x: 24, y: 79
+LOG:overlap: 14, 4
+LOG:p[0]
+x: 67, y: 31
+LOG:p[1]
+x: 81, y: 45
+LOG:p[0]
+x: 84, y: 83
+LOG:p[1]
+x: 96, y: 93
+LOG:overlap: 14, 6
+LOG:p[0]
+x: 67, y: 31
+LOG:p[1]
+x: 81, y: 45
+LOG:p[0]
+x: 63, y: 81
+LOG:p[1]
+x: 74, y: 87
+LOG:--0--
+LOG:p[0]
+x: 85, y: 71
+LOG:p[1]
+x: 93, y: 78
+LOG:--1--
+LOG:p[0]
+x: 61, y: 15
+LOG:p[1]
+x: 69, y: 24
+LOG:--2--
+LOG:p[0]
+x: 40, y: 59
+LOG:p[1]
+x: 51, y: 72
+LOG:--3--
+LOG:p[0]
+x: 82, y: 56
+LOG:p[1]
+x: 93, y: 63
+LOG:--4--
+LOG:p[0]
+x: 84, y: 83
+LOG:p[1]
+x: 96, y: 93
+LOG:--5--
+LOG:p[0]
+x: 33, y: 34
+LOG:p[1]
+x: 46, y: 48
+LOG:--6--
+LOG:p[0]
+x: 63, y: 81
+LOG:p[1]
+x: 74, y: 87
+LOG:--7--
+LOG:p[0]
+x: 38, y: 75
+LOG:p[1]
+x: 48, y: 81
+LOG:--8--
+LOG:p[0]
+x: 84, y: 4
+LOG:p[1]
+x: 92, y: 9
+LOG:--9--
+LOG:p[0]
+x: 14, y: 72
+LOG:p[1]
+x: 24, y: 79
+LOG:--10--
+LOG:p[0]
+x: 56, y: 94
+LOG:p[1]
+x: 64, y: 99
+LOG:--11--
+LOG:p[0]
+x: 94, y: 36
+LOG:p[1]
+x: 99, y: 45
+LOG:--12--
+LOG:p[0]
+x: 48, y: 3
+LOG:p[1]
+x: 55, y: 13
+LOG:--13--
+LOG:p[0]
+x: 53, y: 50
+LOG:p[1]
+x: 64, y: 55
+LOG:--14--
+LOG:p[0]
+x: 67, y: 31
+LOG:p[1]
+x: 81, y: 45
+LOG:--15--
+LOG:p[0]
+x: 1, y: 90
+LOG:p[1]
+x: 7, y: 96

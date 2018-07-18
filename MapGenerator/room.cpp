@@ -1,11 +1,12 @@
 #include <iostream>
+#include <unistd.h>
 #include <cstdlib>
 #include <ctime>
 #include <cmath>
-#include <Windows.h>
-#include <conio.h>
 #include "room.h"
 #include "cursor.h"
+
+int cnt = 0;
 
 int Room::GetAttr()
 {
@@ -121,13 +122,14 @@ void SquareRoom::ShowRoom() const
 			else if (j == p[0].GetX() || j == p[1].GetX())
 				std::cout << '#';
 			else
-				std::cout << '.';
+				std::cout<<'.';//std::cout << std::hex <<cnt;
 		}
 		//std::cout << i << std::endl;
 		gotoxy(p[0].GetX(),i+1);
 		count++;
 	}
-
+	cnt++;
+	sleep(1);
 }
 
 Point SquareRoom::GetPoint(int token) const
@@ -158,18 +160,45 @@ bool SquareRoom::OverlapRoom(Room &other) const
 	return false;
 }
 
+/*
+void SquareRoom::WriteLog(Log &l) const
+{
+	std::string str = "";
+
+	for(int i=0;i<2;i++)
+	{
+		str="p["+std::to_string(i)+"]\n";
+		str+="x: "+std::to_string(p[i].GetX())+", y: "+std::to_string(p[i].GetY());
+		//l.WriteLog(str);
+	}
+}
+*/
+
+RoomList::RoomList()
+{
+	//roomLog = new Log("room_log.txt");
+
+	//roomLog->WriteLog("===Generator start===");
+}
+
 void RoomList::ShowRoomList()
 {
 	for (int i = 0; i < MAX_ROOM; i++)
 	{
 		//system("pause");
 		if(list[i].GetAttr()==SQUARE_MODE)
+		{
 			list[i].ShowRoom();
+			//roomLog->WriteLog("--"+std::to_string(i)+"--");
+			//list[i].WriteLog(*roomLog);
+		}
 	}
 }
 
 void RoomList::SetRoomList()
 {
+	
+
 	for (int i = 0; i < MAX_ROOM; i++)
 	{
 		list[i] = *(new SquareRoom());
@@ -179,6 +208,13 @@ void RoomList::SetRoomList()
 			if (list[i].OverlapRoom(list[j]))
 			{
 				i--;
+				//std::string str = "";
+				//str +="overlap: "+std::to_string(i)+", "+std::to_string(j);
+				//roomLog->WriteLog(str);
+				//list[i].WriteLog(*roomLog);
+				//list[j].WriteLog(*roomLog);
+
+				//delete &(list[i]);
 				break; 
 			}
 		}
