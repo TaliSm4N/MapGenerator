@@ -13,7 +13,7 @@ int main()
 	Room *test = new SquareRoom();
 	RoomList *roomList = new RoomList();
 
-	
+
 #ifdef _WIN32
 	system("mode con cols=200 lines=100");
 	system("cls");
@@ -25,7 +25,7 @@ int main()
 	{
 		for(int j=0;j<MAP_SIZE;j++)
 		{
-			std::cout<<'*';
+			std::cout<<"***";
 		}
 		std::cout<<std::endl;
 	}
@@ -37,7 +37,7 @@ int main()
 	test->SetPosition();
 	test->ShowRoom();
 
-	
+
 	test->GetRoom();
 
 	((SquareRoom *)test)->GetPoint(1).GetPoint();
@@ -47,6 +47,3 @@ int main()
 	roomList->ShowRoomList();
 	//roomList->GetRoomList();
 }
-
-
-

@@ -21,6 +21,8 @@ private:
 	int x;
 	int y;
 public:
+	Point():x(0),y(0){};
+	Point(int X, int Y):x(X),y(Y){};
 	//한 변의 길이의 크기 조건 확인
 	bool LineCheck(int line) const;
 	//두 Point가 범위 안에 들어오는 지 확인
@@ -34,6 +36,21 @@ public:
 	void GetPoint() const;
 	int GetX() const;
 	int GetY()const;
+
+
+	Point operator=(const Point& right)
+	{
+		this->x = right.x;
+		this->y = right.y;
+	}
+/*
+	Point operator+(const Point& right)
+	{
+		int x = this.x + right.x;
+		int y = this.y + right.y;
+		return Point(x,y);
+	}
+	*/
 };
 
 //방의 부모 클래스
@@ -45,10 +62,10 @@ protected:
 public:
 	virtual void SetPosition() {};
 	virtual void GetPosition() const {};
+	virtual void SetDoor(){};
 	virtual void GetRoom() const {};
 	virtual void ShowRoom() const{};
 	virtual bool OverlapRoom(Room &other) const { return false; };
-	//virtual void WriteLog(Log &l) const {};
 
 	int GetAttr();
 };
@@ -58,14 +75,18 @@ class SquareRoom : public Room
 {
 private:
 	Point p[2];
+	Point door[4];
+	int door_cnt;
 public:
-	SquareRoom() { attr = SQUARE_MODE; };
+	SquareRoom():door_cnt(0) { attr=SQUARE_MODE;  };
 	void SetPosition();
 	void GetRoom() const;
 	void ShowRoom() const;
 	Point GetPoint(int token) const;
 	bool LineOverlap(int mode, int start, int end) const;
 	bool OverlapRoom(Room &other) const;
+	void SetDoor();
+	void GetDoorCnt() const;
 	//void WriteLog(Log &l) const;
 };
 

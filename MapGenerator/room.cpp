@@ -49,12 +49,12 @@ bool Point::RangeCheck(int mode, int p) const
 	{
 		range = abs(this->y - p)+1;
 	}
-		
+
 	if (LineCheck(range))
 	{
 		return true;
 	}
-	
+
 	return false;
 }
 
@@ -110,22 +110,23 @@ void SquareRoom::ShowRoom() const
 {
 	int count=0;
 	gotoxy(0,0);
-	gotoxy(p[0].GetX(),p[0].GetY());
+	gotoxy(p[0].GetX()*3,p[0].GetY());
 
 	for(int i=p[0].GetY();i<=p[1].GetY();i++)
 	{
-		
+
 		for(int j=p[0].GetX();j<=p[1].GetX();j++)
 		{
+			//문자로 표시시 가로가 세로에 비해 짧게 보이므로 셋으로 출력
 			if (count == 0 || i == p[1].GetY())
-				std::cout << '#';
+				std::cout << "###";
 			else if (j == p[0].GetX() || j == p[1].GetX())
-				std::cout << '#';
+				std::cout << "###";
 			else
-				std::cout<<'.';//std::cout << std::hex <<cnt;
+				std::cout<<"...";//std::cout << std::hex <<cnt;
 		}
 		//std::cout << i << std::endl;
-		gotoxy(p[0].GetX(),i+1);
+		gotoxy(p[0].GetX()*3,i+1);
 		count++;
 	}
 	cnt++;
@@ -158,6 +159,20 @@ bool SquareRoom::OverlapRoom(Room &other) const
 	}
 
 	return false;
+}
+
+void SquareRoom::SetDoor()
+{
+	Point *dp=new Point();
+	if(door_cnt<4)
+	{
+		door[door_cnt++]=*dp;
+	}
+}
+
+void SquareRoom::GetDoorCnt() const
+{
+	return door_cnt;
 }
 
 /*
@@ -197,7 +212,7 @@ void RoomList::ShowRoomList()
 
 void RoomList::SetRoomList()
 {
-	
+
 
 	for (int i = 0; i < MAX_ROOM; i++)
 	{
@@ -215,7 +230,7 @@ void RoomList::SetRoomList()
 				//list[j].WriteLog(*roomLog);
 
 				//delete &(list[i]);
-				break; 
+				break;
 			}
 		}
 	}
